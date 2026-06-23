@@ -36,12 +36,24 @@ jobs:
 
       - name: 変更があればコミット
         run: |
-          if [[ -n "$(git status --porcelain README.md)" ]]; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add README.md
-            git commit -m "chore: イベント情報を自動更新 ($(date -u +%Y-%m-%d))"
-            git push
-          else
+          if [[ -z "$(git status --porcelain README.md)" ]]; then
             echo "変更なし。コミットをスキップします。"
+            exit 0
           fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: イベント情報を自動更新 ($(date -u +%Y-%m-%d))"
+          # リモートが進んでいても確実に反映するため、リベース＋リトライ
+          for i in 1 2 3; do
+            git fetch origin main
+            git rebase -X theirs origin/main || git rebase --abort || true
+            if git push origin HEAD:main; then
+              echo "push 成功"
+              exit 0
+            fi
+            echo "リモートが更新されたため再試行 ($i/3)..."
+            sleep 5
+          done
+          echo "push に失敗しました"
+          exit 1
