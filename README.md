@@ -4,17 +4,21 @@
 
 **収集サイト一覧:**
 - [西日本新聞 福岡おでかけ・イベント情報](https://www.nishinippon.co.jp/kyushu_event/)
-- [久留米ファン](https://kurumefan.com/)
+- [久留米ファン イベントカレンダー](https://kurumefan.com/event-calendar-table)
 - [筑後いこい](https://chikugo-ikoi.com/category/event/)
 - [くまもとガイド（公式観光サイト）](https://kumamoto.guide/events/)
 - [熊本おでかけ情報](https://kumamoto-odekake.com/event/)
 - [サンリオ スポット](https://www.sanrio.co.jp/spots/?categories=56)
+- [イオンモール大牟田](https://omuta.aeonmall.jp/event)
+- [イオンモール筑紫野](https://chikushino.aeonmall.jp/event)
+- [イオン小郡ショッピングセンター](https://tenpo.aeon-kyushu.info/detail/ogori/)
+- [イオンモール福岡](https://fukuoka.aeonmall.jp/event)
 
 最終更新: 2026-06-23
 
 ---
 
-## 📍 福岡県南部（久留米・大牟田・筑後・八女・柳川・みやき）
+## 📍 福岡県南部（久留米・大牟田・筑後・八女・柳川・みやき・小郡）
 
 | イベント名 | 日程 | 場所 | 詳細 |
 |---|---|---|---|
@@ -27,17 +31,25 @@
 | [久留米 萃香園ホテル「BEER HALL2026」](https://kurumefan.com/suikoyen-beerhall2026) | 6/3〜9/27 | 萃香園ホテル（久留米市） | 涼しいホールでビアホール |
 | [星光ファーム旬「トウモロコシ狩り2026」](https://kurumefan.com/seikoufarm-toumorokosh2026) | 6/10〜9月下旬 | 星光ファーム旬（久留米市） | 有機栽培・無農薬トウモロコシ狩り |
 | [第13回 もんぺ博覧会](https://www.nishinippon.co.jp/kyushu_event/60188/) | 6/25〜7/6 | うなぎの寝床・旧寺崎邸（八女市） | もんぺ文化を発信する博覧会 |
-| [超宇宙刑事ギャバン インフィニティ 撮影会](https://chikugo-ikoi.com/gavaninf-omuta/) | 6/27 | イオンモール大牟田（大牟田市） | ヒーローショー＆写真撮影会 |
+| [超宇宙刑事ギャバン インフィニティ 撮影会](https://omuta.aeonmall.jp/event) | 6/27 | イオンモール大牟田（大牟田市） | ヒーローショー＆写真撮影会 |
+| [大牟田高等学校吹奏楽部 演奏会](https://omuta.aeonmall.jp/event) | 6/27 | イオンモール大牟田（大牟田市） | 吹奏楽部による無料演奏会 |
+| [100万人のクラシックライブ meet AEON MALL](https://omuta.aeonmall.jp/event) | 6/27 | イオンモール大牟田（大牟田市） | クラシック生演奏イベント |
+| [明治安田生命 健康チェック測定会](https://omuta.aeonmall.jp/event) | 6/27〜6/28 | イオンモール大牟田（大牟田市） | 無料健康チェック |
 | [0歳からのキッズコンサート](https://www.nishinippon.co.jp/kyushu_event/59898/) | 6/27 | 石橋文化ホール（久留米市） | 0歳から楽しめる生演奏コンサート |
 | [大牟田銀座寿通りハシゴ酒](https://chikugo-ikoi.com/omuta-hashigozake2026/) | 6/26 | 寿通り（大牟田市本町） | チケット購入でお得にはしご酒 |
+| [NHKのど自慢 久留米公演](https://chikugo-ikoi.com/nodojiman-kurume2026/) | 6/28 | 久留米シティプラザ | 出場者・観覧者募集中 |
+| [おおむたスタンプラリー](https://omuta.aeonmall.jp/event) | 6/28 | イオンモール大牟田（大牟田市） | スタンプを集めてプレゼント |
+| [イオンモールこども将棋王決定戦2026](https://omuta.aeonmall.jp/event) | 6/28 | イオンモール大牟田（大牟田市） | 子ども将棋大会 |
 | [みやきマルシェ×ゆめマルシェ](https://kurumefan.com/miyakimarche202606) | 6/27〜6/28 | みやき町 | 約140店舗が大集合！ステージイベントも |
 | [みやき町『二千年ハス鑑賞会』](https://kurumefan.com/miyaki-nisennen-hasu2026) | 6/27〜6/28 | 千栗土居公園南側蓮池（みやき町） | 古代ハスの鑑賞会 |
 | [スカイパーク久留米『サマーウォーターガンフェス』](https://kurumefan.com/skypark-waterganfes) | 6/28 | スカイパーク久留米 | ウォーターサバゲー・シャボン玉シューティング |
 | [イオンモール大牟田『名探偵プリキュア！ショー』](https://kurumefan.com/meitantei-precure-omuta202606) | 6/28 | イオンモール大牟田 | ステージショー・撮影会（観覧無料） |
 | [にじいろマルシェ](https://chikugo-ikoi.com/nijiiro-marche20260628/) | 6/28 | 恋ぼたる（筑後市尾島） | ハンドメイド雑貨・グルメが集まるマルシェ |
 | [おりなすシアター「ファミリア」](https://www.nishinippon.co.jp/kyushu_event/60221/) | 6/28 | 八女市民会館 おりなす八女 はちひめホール | 演劇公演 |
+| [歌のお兄さん「ともちか890（やっくん）」ファミリーイベント](https://tenpo.aeon-kyushu.info/detail/ogori/) | 6/28 | イオン小郡ショッピングセンター（小郡市） | 参加無料のファミリー向け歌イベント |
 | [久留米市『土曜夜市2026』](https://kurumefan.com/kurume-doyouyoichi2026) | 6/20〜7/25 毎週土曜 | 久留米ほとめき通り商店街 | 夏の風物詩！沢山のお店が並ぶ |
-| [土曜食いだおれ夜市2026](https://chikugo-ikoi.com/) | 毎週土曜（夏季） | 恋ぼたる（筑後市） | 70店舗以上が週替わりで大集合 |
+| [土曜食いだおれ夜市2026](https://chikugo-ikoi.com/kuidaoreyoichi-chikugo2026/) | 毎週土曜（夏季） | 恋ぼたる（筑後市） | 70店舗以上が週替わりで大集合 |
+| [イオン小郡 ランドセルフェス](https://tenpo.aeon-kyushu.info/detail/ogori/) | 6/26〜7/5 | イオン小郡ショッピングセンター（小郡市） | ランドセル展示・相談会 |
 | [ブルーベリー村「ブルーベリー狩り」](https://kurumefan.com/blueberrynomura2026) | 7/3〜8/30 | ブルーベリー村（久留米市） | 時間無制限で食べ放題 |
 | [ホテルマリターレ創世 久留米「ビアガーデン2026」](https://kurumefan.com/hotelsousei-beer-garden2026) | 7/3〜9/26 | ホテルマリターレ創世 久留米 | 炭火焼きバーベキュー付き開放的ガーデン |
 | [中国映画会「再会長江」](https://www.nishinippon.co.jp/kyushu_event/60229/) | 7/4 | 石橋文化会館 小ホール（久留米市） | 中国映画の上映会 |
