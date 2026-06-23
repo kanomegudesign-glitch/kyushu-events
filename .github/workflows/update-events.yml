@@ -1,0 +1,44 @@
+name: 週次イベント更新
+
+on:
+  schedule:
+    # 月曜 23:00 UTC = 火曜 08:00 JST（毎週火曜の朝に実行）
+    - cron: "0 23 * * 1"
+  workflow_dispatch: {}   # 手動実行も可能
+
+permissions:
+  contents: write          # README をコミットするために必要
+
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 依存をインストール
+        run: pip install -r requirements.txt
+
+      - name: イベントを収集して README を生成
+        run: python scrape.py
+
+      - name: 変更があればコミット
+        run: |
+          if [[ -n "$(git status --porcelain README.md)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: イベント情報を自動更新 ($(date +%Y-%m-%d))"
+            git push
+          else
+            echo "変更なし。コミットをスキップします。"
+          fi
