@@ -1,9 +1,9 @@
-name: 週次イベント更新
+name: 日次イベント更新
 
 on:
   schedule:
-    # 月曜 23:00 UTC = 火曜 08:00 JST（毎週火曜の朝に実行）
-    - cron: "0 23 * * 1"
+    # 15:00 UTC = 00:00 JST（毎日深夜0時に実行）
+    - cron: "0 15 * * *"
   workflow_dispatch: {}   # 手動実行も可能
 
 permissions:
@@ -28,6 +28,9 @@ jobs:
       - name: 依存をインストール
         run: pip install -r requirements.txt
 
+      - name: Playwright(Chromium) を導入
+        run: python -m playwright install --with-deps chromium
+
       - name: イベントを収集して README を生成
         run: python scrape.py
 
@@ -37,7 +40,7 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add README.md
-            git commit -m "chore: イベント情報を自動更新 ($(date +%Y-%m-%d))"
+            git commit -m "chore: イベント情報を自動更新 ($(date -u +%Y-%m-%d))"
             git push
           else
             echo "変更なし。コミットをスキップします。"
