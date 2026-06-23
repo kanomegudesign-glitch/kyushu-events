@@ -38,13 +38,13 @@ jobs:
 
       - name: 変更があればコミット
         run: |
-          if [[ -z "$(git status --porcelain README.md)" ]]; then
+          if [[ -z "$(git status --porcelain README.md events_canva.csv)" ]]; then
             echo "変更なし。コミットをスキップします。"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md events_canva.csv
           git commit -m "chore: イベント情報を自動更新 ($(date -u +%Y-%m-%d))"
           # リモートが進んでいても確実に反映するため、リベース＋リトライ
           for i in 1 2 3; do
