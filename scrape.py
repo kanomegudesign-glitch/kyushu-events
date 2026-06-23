@@ -204,7 +204,10 @@ def parse_generic(html, base_url, source, area_hint=None, href_filter=None):
         ev = make_event(title, full, ctx, source, area_hint)
         if ev and ev["area"]:
             events.append(ev)
-    return dedupe(events)
+    events = dedupe(events)
+    # 開催日が近い順に並べて上限件数で打ち切る
+    events.sort(key=lambda x: (x["start"] or datetime.date.max))
+    return events[:MAX_PER_SOURCE]
 
 
 # ---------------------------------------------------------------------------
@@ -260,8 +263,9 @@ KUMAMOTO_AREAS = ["6", "64", "65"]  # 県北・荒尾玉名・山鹿
 
 GENERIC_SITES = [
     # (source名, URL, base_url, area_hint, href_filter)
+    # ※ href_filter はリンクが相対パスの場合も一致するよう、ドメインではなくパス断片を使う
     ("久留米ファン", "https://kurumefan.com/event-calendar-table",
-     "https://kurumefan.com", "福岡県南部", "kurumefan.com"),
+     "https://kurumefan.com", "福岡県南部", None),
     ("イオンモール大牟田", "https://omuta.aeonmall.jp/event",
      "https://omuta.aeonmall.jp", "福岡県南部", "/event"),
     ("イオンモール筑紫野", "https://chikushino.aeonmall.jp/event",
@@ -269,12 +273,15 @@ GENERIC_SITES = [
     ("イオン小郡SC", "https://tenpo.aeon-kyushu.info/detail/ogori/",
      "https://tenpo.aeon-kyushu.info", "福岡県南部", None),
     ("熊本おでかけ情報", "https://kumamoto-odekake.com/event/",
-     "https://kumamoto-odekake.com", None, "kumamoto-odekake.com"),
+     "https://kumamoto-odekake.com", None, "/event/"),
     ("西日本新聞", "https://www.nishinippon.co.jp/kyushu_event/",
      "https://www.nishinippon.co.jp", None, "/kyushu_event/"),
     ("サンリオスポット", "https://www.sanrio.co.jp/spots/?categories=56",
      "https://www.sanrio.co.jp", None, None),
 ]
+
+# 1サイトが大量のリンクを拾ってREADMEを埋め尽くさないよう、サイト単位で上限を設ける
+MAX_PER_SOURCE = 30
 
 
 def render(page, url, wait_ms=2500):
