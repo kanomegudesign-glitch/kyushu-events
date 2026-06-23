@@ -66,6 +66,7 @@ EXCLUDE_WORDS = [
     "セール", "ポップアップ", "貸出", "給水", "募集中",
     "プレミアムチケット", "お買物券", "ご案内", "体験会",
     "アプリ", "ポイント還元", "割引",
+    "作品募集", "コンテスト", "Vote", "ご優待", "抽選",
 ]
 
 # ---------------------------------------------------------------------------
@@ -442,52 +443,42 @@ def _city_label(e):
     return (e.get("area") or "").replace("エリア", "")
 
 
-# Canva 一括作成（Bulk Create）用CSV。1行＝1枚（イベント2件）。
+# Canva 一括作成（Bulk Create）用CSV。1行＝1イベント（1枚）。
+# 一覧から好きな行をチェックして生成できるよう、1イベント1行のメニュー形式。
 # 列見出しは Canva 側のフィールド接続と一致させる必要があるため固定。
-CANVA_HEADERS = [
-    "見出し日付",
-    "エリア1", "イベント名1", "日時1", "場所1", "参加費1", "駐車場1", "要約1",
-    "エリア2", "イベント名2", "日時2", "場所2", "参加費2", "駐車場2", "要約2",
-]
+CANVA_HEADERS = ["エリア", "イベント名", "日時", "場所", "参加費", "駐車場", "要約"]
+
+# CSV（投稿候補メニュー）に載せない長期開催の上限日数。これを超える
+# 販促・展示・通年企画は除外し、単発の“映える”イベントを上位に並べる。
+CANVA_MAX_DURATION_DAYS = 35
 
 
-def _canva_cols(e, n):
-    return {
-        f"エリア{n}": _city_label(e),
-        f"イベント名{n}": e.get("title", ""),
-        f"日時{n}": e.get("date_disp", "") or "不明",
-        f"場所{n}": e.get("place", "") or "不明",
-        f"参加費{n}": "",       # スクレイパーでは取得不可（手入力 or 公式確認）
-        f"駐車場{n}": "",       # 同上
-        f"要約{n}": e.get("detail", ""),
-    }
-
-
-def build_canva_csv(events, path="events_canva.csv", max_rows=10):
-    """開催日順に2件ずつペアにして、Canva一括作成用CSVを書き出す。"""
-    items = [e for e in events if e.get("start")]
+def build_canva_csv(events, path="events_canva.csv", max_rows=40):
+    """開催日順の1イベント1行メニューCSVを書き出す（長期開催は除外）。"""
+    items = []
+    for e in events:
+        if not e.get("start"):
+            continue
+        end = e.get("end") or e["start"]
+        if (end - e["start"]).days > CANVA_MAX_DURATION_DAYS:
+            continue  # 通年・長期の販促/展示は投稿候補から外す
+        items.append(e)
     items.sort(key=lambda x: x["start"])
-    rows = []
-    for i in range(0, len(items), 2):
-        e1 = items[i]
-        e2 = items[i + 1] if i + 1 < len(items) else None
-        row = {"見出し日付": e1.get("date_disp", "")}
-        row.update(_canva_cols(e1, 1))
-        if e2:
-            row["見出し日付"] = f'{e1.get("date_disp","")}・{e2.get("date_disp","")}'
-            row.update(_canva_cols(e2, 2))
-        else:
-            for k in ("エリア2", "イベント名2", "日時2", "場所2",
-                      "参加費2", "駐車場2", "要約2"):
-                row[k] = ""
-        rows.append(row)
-        if len(rows) >= max_rows:
-            break
+    items = items[:max_rows]
     with open(path, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CANVA_HEADERS)
         w.writeheader()
-        w.writerows(rows)
-    return len(rows)
+        for e in items:
+            w.writerow({
+                "エリア": _city_label(e),
+                "イベント名": e.get("title", ""),
+                "日時": e.get("date_disp", "") or "不明",
+                "場所": e.get("place", "") or "不明",
+                "参加費": "",   # スクレイパーでは取得不可（手入力 or 公式確認）
+                "駐車場": "",   # 同上
+                "要約": e.get("detail", ""),
+            })
+    return len(items)
 
 
 def build_readme(events):
