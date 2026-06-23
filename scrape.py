@@ -139,6 +139,41 @@ def short(text, n=42):
     return text[:n] + ("…" if len(text) > n else "")
 
 
+# 詳細列用：既存テキストから日付・場所の定型を取り除き、内容を約30字に整える
+_LEAD_DATE_RE = re.compile(
+    r"^[\s　、,]*"
+    r"(?:20\d{2}年)?\d{1,2}月\d{1,2}日(?:[（(][^）)]{0,4}[）)])?"
+    r"(?:\s*[~〜～\-－]\s*(?:20\d{2}年)?\d{1,2}月\d{1,2}日(?:[（(][^）)]{0,4}[）)])?)?"
+    r"[\s　、,。・]*"
+)
+_PLACE_RE = re.compile(
+    r"(県|市|町|村|区|館|モール|センター|ホール|公園|駅|広場|商店街|"
+    r"ホテル|寺|神社|会館|プラザ|コート|ランド|スタジアム|アリーナ)"
+)
+
+
+def summarize_detail(title, ctx):
+    text = (ctx or title or "").strip()
+    # 最初の文だけ使う（末尾のサイト定型文を落とす）
+    text = re.split(r"[。\n]", text)[0].strip()
+    # 先頭の日付表現を除去
+    text = _LEAD_DATE_RE.sub("", text).strip(" 、,　")
+    # 「場所＋で／に／にて」の直後に引用イベント名（「」『』）が来るなら、そこから始める
+    m = re.search(r"[でにて](?=[「『])", text[:60])
+    if m and _PLACE_RE.search(text[:m.start() + 1]):
+        text = text[m.start() + 1:]
+    else:
+        # 引用が無くても、先頭が明らかな場所句なら「…で/に」まで落とす（場所列が別にあるため）
+        m2 = re.match(r"^.{2,45}?(?:県|市|町|村)[^、。「『]{0,22}?[でにて](?=\S)", text)
+        if m2 and len(text) - m2.end() >= 6:
+            text = text[m2.end():]
+    text = text.strip(" 、,　")
+    if len(text) < 4:  # 削りすぎたら元テキストにフォールバック
+        text = re.split(r"[。\n]", (ctx or title or ""))[0].strip()
+    text = re.sub(r"\s+", "", text)
+    return text[:30] + ("…" if len(text) > 30 else "")
+
+
 def clean_title(text):
     t = re.split(r"20\d{2}年", text)[0].strip()
     t = re.sub(r"^(開催中|NEW!?|PR)", "", t).strip()
@@ -182,7 +217,7 @@ def make_event(title, url, ctx, source, area_hint=None):
         "title": clean_title(title),
         "url": url,
         "place": extract_place(title, ctx),
-        "detail": short(ctx or title),
+        "detail": summarize_detail(title, ctx),
         "start": start, "end": end, "date_disp": disp,
         "area": area, "source": source,
     }
