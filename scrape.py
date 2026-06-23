@@ -74,21 +74,31 @@ def parse_dates(text):
     if not text:
         return None, None, ""
     dates = []
-    for y, m, d in DATE_RE.findall(text):
+    base_year = None
+    # 年付きの完全な日付（2026年6月1日 / 2026.6.1 など）
+    for m in DATE_RE.finditer(text):
+        y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
         try:
-            dates.append(datetime.date(int(y), int(m), int(d)))
+            dates.append(datetime.date(y, mo, d))
+            if base_year is None:
+                base_year = y
         except ValueError:
             pass
-    if not dates:
-        for m, d in MD_RE.findall(text):
-            try:
-                m, d = int(m), int(d)
-                cand = datetime.date(TODAY.year, m, d)
-                if cand < TODAY - datetime.timedelta(days=120):
-                    cand = datetime.date(TODAY.year + 1, m, d)
-                dates.append(cand)
-            except ValueError:
-                pass
+    # 年が省略された「6月28日」型（範囲の終了日などに多い）も拾う。
+    # 完全な日付の部分は取り除いてから走査し、二重カウントを避ける。
+    remainder = DATE_RE.sub(" ", text)
+    by = base_year or TODAY.year
+    for m in MD_RE.finditer(remainder):
+        mo, d = int(m.group(1)), int(m.group(2))
+        try:
+            cand = datetime.date(by, mo, d)
+            if dates and cand < min(dates):
+                cand = datetime.date(by + 1, mo, d)   # 年をまたぐ範囲
+            elif not dates and cand < TODAY - datetime.timedelta(days=120):
+                cand = datetime.date(TODAY.year + 1, mo, d)
+            dates.append(cand)
+        except ValueError:
+            pass
     if not dates:
         return None, None, ""
     start, end = min(dates), max(dates)
@@ -261,11 +271,37 @@ def parse_kumamoto_guide_area(html):
 
 KUMAMOTO_AREAS = ["6", "64", "65"]  # 県北・荒尾玉名・山鹿
 
+def parse_kurumefan(html):
+    """久留米ファンのイベントカレンダー。
+    構造: <article> 内の <ul><li> に「日付テキスト + <br> + <a>タイトル</a>」。
+    """
+    events = []
+    soup = BeautifulSoup(html, "html.parser")
+    art = soup.find("article") or soup
+    for li in art.find_all("li"):
+        a = li.find("a", href=True)
+        if not a:
+            continue
+        title = a.get_text(" ", strip=True)
+        if len(title) < 6:
+            continue
+        ctx = li.get_text(" ", strip=True)
+        if not (DATE_RE.search(ctx) or MD_RE.search(ctx)):
+            continue
+        href = a["href"]
+        full = href if href.startswith("http") else \
+            "https://kurumefan.com/" + href.lstrip("/")
+        ev = make_event(title, full, ctx, "久留米ファン", "福岡県南部")
+        if ev and ev["area"]:
+            events.append(ev)
+    events = dedupe(events)
+    events.sort(key=lambda x: (x["start"] or datetime.date.max))
+    return events[:MAX_PER_SOURCE]
+
+
 GENERIC_SITES = [
     # (source名, URL, base_url, area_hint, href_filter)
     # ※ href_filter はリンクが相対パスの場合も一致するよう、ドメインではなくパス断片を使う
-    ("久留米ファン", "https://kurumefan.com/event-calendar-table",
-     "https://kurumefan.com", "福岡県南部", None),
     ("イオンモール大牟田", "https://omuta.aeonmall.jp/event",
      "https://omuta.aeonmall.jp", "福岡県南部", "/event"),
     ("イオンモール筑紫野", "https://chikushino.aeonmall.jp/event",
@@ -366,8 +402,16 @@ def main():
     all_events = []
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--no-sandbox"])
-        ctx = browser.new_context(user_agent=UA, locale="ja-JP",
-                                  viewport={"width": 1366, "height": 1800})
+        ctx = browser.new_context(
+            user_agent=UA, locale="ja-JP",
+            timezone_id="Asia/Tokyo",
+            viewport={"width": 1366, "height": 1800},
+            extra_http_headers={
+                "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+                "Accept": ("text/html,application/xhtml+xml,application/xml;"
+                           "q=0.9,image/avif,image/webp,*/*;q=0.8"),
+            },
+        )
         page = ctx.new_page()
 
         # 1) 筑後いこい
@@ -378,6 +422,15 @@ def main():
             all_events += evs
         except Exception as e:
             print(f"[WARN] 筑後いこい: {e}", file=sys.stderr); traceback.print_exc()
+
+        # 1.5) 久留米ファン（専用パーサ）
+        try:
+            html = render(page, "https://kurumefan.com/event-calendar-table", wait_ms=4000)
+            evs = parse_kurumefan(html)
+            print(f"[OK] 久留米ファン: {len(evs)}", file=sys.stderr)
+            all_events += evs
+        except Exception as e:
+            print(f"[WARN] 久留米ファン: {e}", file=sys.stderr)
 
         # 2) くまもとガイド（エリア別検索）
         for aid in KUMAMOTO_AREAS:
