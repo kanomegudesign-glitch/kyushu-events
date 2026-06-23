@@ -22,23 +22,23 @@
 
 | イベント名 | 日程 | 場所 | 詳細 | 出典 |
 | --- | --- | --- | --- | --- |
-| [第27回炭都写真コンテスト作品募集と前回優秀作品展示](https://omuta.aeonmall.jp/event/852f19c8-2edc-4e3c-97b5-e0798df603a6) | 5/30〜10/14 | 不明 | 第27回炭都写真コンテスト作品募集と前回優秀作品展示 | イオンモール大牟田 |
 | [超！COOOOOOL作戦](https://omuta.aeonmall.jp/event/372a88aa-3b01-487c-a95b-da224c664955) | 6/1〜9/30 | 不明 | 超！COOOOOOL作戦 | イオンモール大牟田 |
 | [イオンモールの超！COOOOOOL作戦！](https://chikushino.aeonmall.jp/event/2b685792-be2c-43b9-8869-2b2fc7dc6445) | 6/1〜9/30 | 不明 | イオンモールの超！COOOOOOL作戦！ | イオンモール筑紫野 |
 | [2026.06.07 【6月28日㈰】歌のお兄さんともちか890（やっくん）ファミリーイベント　💛参加無料💛](https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1758523/) | 6/7〜6/28 | 不明 | 2026.06.07【6月28日㈰】歌のお兄さんともちか89… | イオン小郡SC |
-| [Discoat あなたならこの夏どう履きこなす？ Easy Pants Styling Vote](https://chikushino.aeonmall.jp/event/b9091793-76bc-4c63-8684-4b956ebda355) | 6/18〜6/30 | 不明 | Discoatあなたならこの夏どう履きこなす？EasyPan… | イオンモール筑紫野 |
 | [期間限定OPEN OZピース](https://chikushino.aeonmall.jp/event/8eda6c1c-7e14-46b1-9c98-b317d73396a9) | 6/19〜9/6 | 不明 | 期間限定OPENOZピース | イオンモール筑紫野 |
 | [2026.06.19 ✨【6月26日㈮〜7月5日㈰】イオンのランドセルフェス✨](https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1707340/) | 6/19〜7/5 | 不明 | 2026.06.19✨【6月26日㈮〜7月5日㈰】イオンのラ… | イオン小郡SC |
+| [久留米「土曜夜市2026」開催！金魚すくいにヨーヨー釣り、かき氷など約100店が軒を並べる](https://chikugo-ikoi.com/kurume-doyoyoichi2026/) | 6/20〜7/25 | 久留米市 | ある久留米ほとめき通り商店街で、今年も「土曜夜市」が開催され… | 筑後いこい |
 | [興膳農園2026](https://chikushino.aeonmall.jp/event/f49fc728-e4c7-4866-86d8-f9944840945c) | 6/23 | 不明 | 興膳農園2026 | イオンモール筑紫野 |
 | [7/4（土）〜7/5（日）「ゆめモール柳川」にサンリオカフェワゴン登場！（福岡） カフェワゴン](https://www.sanrio.co.jp/news/spots/cafewagon-yanagawa-20260623/) | 6/23 | 不明 | 7/4（土）〜7/5（日）「ゆめモール柳川」にサンリオカフェ… | サンリオスポット |
 | [興膳農園2026](https://chikushino.aeonmall.jp/event/6c02e644-9410-4ac4-86dc-a735f131ac47) | 6/25 | 不明 | 興膳農園2026 | イオンモール筑紫野 |
 | [おもちゃ病院](https://chikushino.aeonmall.jp/event/5148ef78-58de-4faf-b319-8bdecfde10ce) | 6/26 | 不明 | おもちゃ病院 | イオンモール筑紫野 |
+| [超宇宙刑事ギャバン インフィニティがやってくる！イオンモール大牟田で写真撮影会（大牟田市）](https://chikugo-ikoi.com/gavaninf-omuta/) | 6/27 | 大牟田市 | 「超宇宙刑事ギャバンインフィニティがやってくる！」が開催され… | 筑後いこい |
 | [大牟田高等学校吹奏楽部 演奏会♪](https://omuta.aeonmall.jp/event/855104a1-d8f0-4ecb-8e99-d1d8b02570a7) | 6/27 | 不明 | 大牟田高等学校吹奏楽部演奏会♪ | イオンモール大牟田 |
 | [100万人のクラシックライブ meet AEON MALL](https://omuta.aeonmall.jp/event/120e5057-3ed1-43a1-8d8e-6d11050bc0d5) | 6/27 | 不明 | 100万人のクラシックライブmeetAEONMALL | イオンモール大牟田 |
-| [超宇宙刑事ギャバン インフィニティがやってくる！（撮影会）](https://omuta.aeonmall.jp/event/a6e44246-a759-46a1-92df-584b9958539d) | 6/27 | 不明 | 超宇宙刑事ギャバンインフィニティがやってくる！（撮影会） | イオンモール大牟田 |
 | [明治安田生命健康チェック測定会](https://omuta.aeonmall.jp/event/5ca70ab5-231d-45f9-9e47-be6baab45687) | 6/27〜6/28 | 不明 | 明治安田生命健康チェック測定会 | イオンモール大牟田 |
 | [それいけ！アンパンマン ショー](https://chikushino.aeonmall.jp/event/f3e65b7d-5e9d-4bff-82f0-4856b3dfac78) | 6/27 | 不明 | それいけ！アンパンマンショー | イオンモール筑紫野 |
 | [〜NTT ドコモ presents～ ニューブロックで遊ぼう！](https://chikushino.aeonmall.jp/event/49345cd4-62e3-4d82-9005-1320ed73d97c) | 6/27〜6/28 | 不明 | 〜NTTドコモpresents～ニューブロックで遊ぼう！ | イオンモール筑紫野 |
+| [「にじいろマルシェ」6月28日開催！ハンドメイド雑貨やグルメなどステキなお店が大集合（筑後市）](https://chikugo-ikoi.com/nijiiro-marche20260628/) | 6/28 | 筑後市 | 「にじいろマルシェ」が開催されます | 筑後いこい |
 | [イオンモールこども将棋王決定戦2026](https://omuta.aeonmall.jp/event/6c1acd41-44a0-4ea6-950b-447e04444806) | 6/28 | 不明 | イオンモールこども将棋王決定戦2026 | イオンモール大牟田 |
 | [おおむたスタンプラリー](https://omuta.aeonmall.jp/event/9de1427b-9c9f-4a15-affe-13a7a7fcb858) | 6/28 | 不明 | おおむたスタンプラリー | イオンモール大牟田 |
 | [名探偵プリキュア！ショー](https://omuta.aeonmall.jp/event/06a7aca6-680e-4b5d-8a97-6281c02bf87c) | 6/28 | 不明 | 名探偵プリキュア！ショー | イオンモール大牟田 |
@@ -52,6 +52,7 @@
 | [ワークショップイベント 手作りカフェ](https://chikushino.aeonmall.jp/event/f4d41fd7-7c8c-4a5a-8151-6f78322746dc) | 7/11〜7/12 | 不明 | ワークショップイベント手作りカフェ | イオンモール筑紫野 |
 | [それいけ！アンパンマン ショー](https://omuta.aeonmall.jp/event/10f07f75-bfa1-4382-9c44-94a44b85585e) | 7/12 | 不明 | それいけ！アンパンマンショー | イオンモール大牟田 |
 | [福岡県警察音楽隊 安全・安心コンサート](https://omuta.aeonmall.jp/event/31c34299-709e-4afc-a2f0-be350ae96d29) | 7/14 | 不明 | 福岡県警察音楽隊安全・安心コンサート | イオンモール大牟田 |
+| [「土曜食いだおれ夜市2026」筑後の大規模夜市イベント開催！70店舗以上が週替わりで大集合（筑後市）](https://chikugo-ikoi.com/kuidaoreyoichi-chikugo2026/) | 7/18〜8/29 | 筑後市 | 「土曜食いだおれ夜市in筑後」が開催されます | 筑後いこい |
 | [7/18～20 OMUTA BIG FESTIVAL2026](https://omuta.aeonmall.jp/event/c966294b-e7d4-4ba4-a05a-0463b7cdd16a) | 7/18〜7/20 | 不明 | 7/18～20OMUTABIGFESTIVAL2026 | イオンモール大牟田 |
 | [⽔遊びひろば](https://omuta.aeonmall.jp/event/e43f9cf2-280f-4cd0-9b97-b81081f4f057) | 7/18〜8/2 | 不明 | ⽔遊びひろば | イオンモール大牟田 |
 | [もりまちマルシェ](https://chikushino.aeonmall.jp/event/e0cd545d-29a8-4b57-b5e2-f5157d44926e) | 7/18〜7/19 | 不明 | もりまちマルシェ | イオンモール筑紫野 |
