@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: リポジトリをチェックアウト
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # rebase を確実に行うため全履歴を取得
 
       - name: Python をセットアップ
         uses: actions/setup-python@v5
