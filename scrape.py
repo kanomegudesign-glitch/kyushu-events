@@ -57,9 +57,14 @@ OTHER_KUMAMOTO = [
 ]
 AREA_ORDER = ["福岡県南部", "熊本県北部", "佐賀エリア", "その他"]
 
-# 全国チェーン/投票系など、地域固有でないノイズを弾く語
+# 販促・キャンペーン等、地域イベントでないノイズを弾く語
 EXCLUDE_WORDS = [
     "総選挙", "人気投票", "ランキングTOP", "オンライン", "通販",
+    "投票", "結果発表", "キャンペーン", "会員登録", "入会",
+    "ポイントプレゼント", "WAON", "決済", "定期便", "クーポン",
+    "セール", "ポップアップ", "貸出", "給水", "募集中",
+    "プレミアムチケット", "お買物券", "ご案内", "体験会",
+    "アプリ", "ポイント還元", "割引",
 ]
 
 # ---------------------------------------------------------------------------
@@ -93,8 +98,10 @@ def parse_dates(text):
         try:
             cand = datetime.date(by, mo, d)
             if dates and cand < min(dates):
-                cand = datetime.date(by + 1, mo, d)   # 年をまたぐ範囲
-            elif not dates and cand < TODAY - datetime.timedelta(days=120):
+                # 既存の日付より前の「裸の月日」は、受付開始日など範囲外の
+                # 別日付であることが多いので無視する（誤った終了日を防ぐ）
+                continue
+            if not dates and cand < TODAY - datetime.timedelta(days=120):
                 cand = datetime.date(TODAY.year + 1, mo, d)
             dates.append(cand)
         except ValueError:
@@ -156,8 +163,20 @@ def summarize_detail(title, ctx):
     text = (ctx or title or "").strip()
     # 最初の文だけ使う（末尾のサイト定型文を落とす）
     text = re.split(r"[。\n]", text)[0].strip()
+    # 先頭の「予告／開催中／本日限定」を除去
+    text = re.sub(r"^(予告|開催中|本日限定|NEW!?|PR)[\s　]*", "", text)
+    # スラッシュ形式の日付（2026/06/27 (土) - ...）を除去
+    text = re.sub(r"20\d{2}\s*/\s*\d{1,2}\s*/\s*\d{1,2}\s*(?:[（(].?[）)])?\s*"
+                  r"(?:[-〜~–]\s*(?:20\d{2}\s*/\s*\d{1,2}\s*/\s*\d{1,2}\s*"
+                  r"(?:[（(].?[）)])?)?)?", "", text)
+    # 「詳細を見る」以降のパンくずを切る
+    text = re.split(r"[\s　]*詳細を見る", text)[0]
     # 先頭の日付表現を除去
     text = _LEAD_DATE_RE.sub("", text).strip(" 、,　")
+    # 同語句の重複を畳む
+    h = len(text) // 2
+    if h > 4 and text[:h].strip() == text[h:].strip():
+        text = text[:h].strip()
     # 「場所＋で／に／にて」の直後に引用イベント名（「」『』）が来るなら、そこから始める
     m = re.search(r"[でにて](?=[「『])", text[:60])
     if m and _PLACE_RE.search(text[:m.start() + 1]):
@@ -175,9 +194,19 @@ def summarize_detail(title, ctx):
 
 
 def clean_title(text):
-    t = re.split(r"20\d{2}年", text)[0].strip()
-    t = re.sub(r"^(開催中|NEW!?|PR)", "", t).strip()
-    return (t or text)[:70]
+    t = (text or "").strip()
+    # 先頭の「予告／開催中／本日限定／NEW／PR」を除去
+    t = re.sub(r"^(予告|開催中|本日限定|NEW!?|PR)[\s　]*", "", t)
+    # 末尾以降のサイト定型・パンくず（「詳細を見る」以降）を切る
+    t = re.split(r"[\s　]*詳細を見る", t)[0]
+    # 末尾の日付（2026/06/27 (土) - ... や 2026年6月27日 以降）を切る
+    t = re.split(r"[\s　]*20\d{2}\s*[/.年]\s*\d{1,2}", t)[0]
+    t = re.sub(r"\s+", " ", t).strip(" 　-－—")
+    # 「同じ語句が2回連続」型の重複を畳む（熊本おでかけ対策）
+    half = len(t) // 2
+    if half > 4 and t[:half].strip() == t[half:].strip():
+        t = t[:half].strip()
+    return (t or text or "")[:60]
 
 
 def extract_place(title, summary):
