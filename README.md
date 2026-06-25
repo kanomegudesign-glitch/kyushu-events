@@ -1,8 +1,11 @@
 # 九州イベント情報まとめ
 
-福岡県南部・熊本県北部・佐賀市内を中心とした九州のイベント情報を収集・掲載しています。
+福岡県南部・熊本県北部・佐賀を中心とした九州のイベント情報を、毎日自動で収集・掲載しています。
+
+**最終更新: 2026-06-26（自動更新／GitHub Actions・Claude非依存）**
 
 **収集サイト一覧:**
+
 - [西日本新聞 福岡おでかけ・イベント情報](https://www.nishinippon.co.jp/kyushu_event/)
 - [久留米ファン イベントカレンダー](https://kurumefan.com/event-calendar-table)
 - [筑後いこい](https://chikugo-ikoi.com/category/event/)
@@ -12,108 +15,86 @@
 - [イオンモール大牟田](https://omuta.aeonmall.jp/event)
 - [イオンモール筑紫野](https://chikushino.aeonmall.jp/event)
 - [イオン小郡ショッピングセンター](https://tenpo.aeon-kyushu.info/detail/ogori/)
-- [イオンモール福岡](https://fukuoka.aeonmall.jp/event)
-
-最終更新: 2026-06-26
 
 ---
 
-## 📍 福岡県南部（久留米・大牟田・筑後・八女・柳川・みやき・小郡）
+## 📍 福岡県南部（久留米・大牟田・筑後・八女・柳川・みやま・小郡など）
 
-| イベント名 | 日程 | 場所 | 詳細 |
-|---|---|---|---|
-| [小郡市 如意輪寺『風鈴祭り2026』かえる寺 数千個の風鈴](https://kurumefan.com/nyoirinji-fuurinfes2026) | 〜6月28日(日) | 小郡市・如意輪寺（かえる寺） | 数千個の風鈴が涼やかな音色 |
-| [石橋文化センター『初夏の花まつり2026』](https://kurumefan.com/isibashi-syoka-hanamaturi2026) | 6月1日〜7月31日 | 久留米市・石橋文化センター | 生花を浮かべた花手水が初登場 |
-| [くるめりあ六ツ門 スカイビアガーデン2026](https://kurumefan.com/kurumeria-skybeergarden2026) | 6月6日〜9月27日 | 久留米市・くるめりあ六ツ門 | 屋上ビアガーデン |
-| [千光寺『あじさい祭り2026』](https://kurumefan.com/senkouji-ajisaimaturi2026) | 6月10日〜9月下旬 | 久留米市・千光寺 | 約7000株のあじさい寺 |
-| [涼を彩る 八女すだれ展示会](https://www.nishinippon.co.jp/kyushu_event/59948/) | 6月13日〜7月5日 | 八女市 | 八女の伝統工芸すだれ展示 |
-| [令和八年 新作 八女盆提灯展](https://www.nishinippon.co.jp/kyushu_event/59950/) | 6月13日〜8月2日 | 八女市 | 八女の盆提灯展示会 |
-| [岩田屋久留米店『夏のFOODフェスティバル』](https://kurumefan.com/iwataya-summer-food-fes2026) | 6月20日〜7月25日 毎週土曜 | 久留米市・岩田屋久留米店 | 旬の味覚や期間限定商品 |
-| [久留米市『土曜夜市2026』](https://kurumefan.com/kurume-doyouyoichi2026) | 6月下旬〜 毎週土曜 | 久留米市・ほとめき通り商店街 | 夏の風物詩、約100店が出店 |
-| [久留米歴史寺子屋塾「久留米と黒龍会」](https://www.nishinippon.co.jp/kyushu_event/60193/) | 6月27日(土) | 久留米市・北野生涯学習センター | 権藤成卿プロジェクト第5回 |
-| [ゆめタウン久留米『黒田藩太鼓焼キャラバン』](https://kurumefan.com/youme-kurume-taikoyaki202606) | 6月27日(土) | 久留米市・ゆめタウン久留米 | 実演販売、限定餡も |
-| [0歳からのキッズコンサート](https://kurumefan.com/ishibashi-kidsconcert20260627) | 6月27日(土) | 久留米市・石橋文化センター | うた・ピアノ・パーカッション |
-| [超宇宙刑事ギャバン インフィニティ撮影会](https://kurumefan.com/gavaninf-omuta202606) | 6月27日(土)・28日(日) | 大牟田市・イオンモール大牟田 | 撮影会開催 |
-| [あわしまる『夏の大感謝祭』](https://kurumefan.com/awashimaru-daikansyasai202606) | 6月27日(土)・28日(日) | 久留米市・あわしまる | くじ付きお楽しみ袋、お菓子直売所 |
-| [大牟田高等学校吹奏楽部 演奏会](https://omuta.aeonmall.jp/event) | 6月27日(土) | 大牟田市・イオンモール大牟田 | 吹奏楽演奏会 |
-| [八女軽トラ市](https://chikugo-ikoi.com/yame-keitoraichi-20260628/) | 6月28日(日) | 八女市 | 新鮮野菜・加工食品・雑貨を販売 |
-| [にじいろマルシェ in 恋ぼたる](https://chikugo-ikoi.com/nijiiro-marche20260628/) | 6月28日(日) | 筑後市・恋ぼたる | ハンドメイド雑貨やグルメ、入場無料 |
-| [スカイパーク久留米『サマーウォーターガンフェス』](https://kurumefan.com/skypark-waterganfes) | 6月28日(日) | 久留米市・スカイパーク久留米 | ウォーターサバゲー、シャボン玉 |
-| [こども縁日夏まつり in 大川小学校](https://chikugo-ikoi.com/okawa-summer-festival2026/) | 6月28日(日) | 大川市・大川小学校 | 縁日ゲーム、こども食堂、ステージ |
-| [名探偵プリキュア！ショー](https://chikugo-ikoi.com/precure-omuta20260628/) | 6月28日(日) | 大牟田市・イオンモール大牟田 | 観覧無料、撮影会も |
-| [おおむたスタンプラリー](https://omuta.aeonmall.jp/event) | 6月28日(日) | 大牟田市・イオンモール大牟田 | スタンプラリー |
-| [歌のお兄さんともちか890 ファミリーイベント](https://tenpo.aeon-kyushu.info/detail/ogori/) | 6月28日(日) | 小郡市・イオン小郡SC | 参加無料 |
-| [ブルーベリー村「ブルーベリー狩り」](https://kurumefan.com/event-calendar-table) | 7月3日〜9月26日 | 久留米市・ブルーベリー村 | 時間無制限で食べ放題 |
-| [ホテルマリターレ創世 久留米「ビアガーデン2026」](https://kurumefan.com/hotelsousei-beer-garden2026) | 7月4日(土) | 久留米市・ホテルマリターレ創世 | 炭火焼きバーベキュー |
-| [鈴木亜美・後藤真希『ふたり旅 2026 LIVE SHOW』](https://kurumefan.com/ami-gomaki-kurume-live) | 7月4日(土) | 久留米市 | トーク＆ライブ |
-| [純烈コンサート2026](https://kurumefan.com/junretsu-okawa2026) | 7月5日(日) | 大川市・大川市文化センター | コンサート |
-| [あばれる君直伝 熱血授業 in 大牟田](https://www.nishinippon.co.jp/kyushu_event/59212/) | 7月5日(日) | 大牟田市・デンカ大牟田文化会館 | 脱出島絶対王者の熱血授業 |
-| [福岡県【筑後地区】合同企業説明会](https://www.nishinippon.co.jp/kyushu_event/60021/) | 7月14日(火) | 久留米市・久留米シティプラザ | 中高年就職支援センター主催 |
-| [OMUTA BIG FESTIVAL2026](https://omuta.aeonmall.jp/event) | 7月18日(土)〜20日(月) | 大牟田市・イオンモール大牟田 | 夏の大型フェス |
-| [大牟田祇園六山 体験会・駐車場ステージ](https://omuta.aeonmall.jp/event) | 7月19日(日) | 大牟田市・イオンモール大牟田 | 祇園六山の体験会 |
-| [中森明菜 ザ・ステージ・プラネタリウム](https://kurumefan.com/nakamori-akina-planetarium) | 7月20日(月・祝) | 大牟田市・デンカ大牟田文化会館 | ステージ＆プラネタリウム |
-| [でんじろう先生のサイエンスショー2026](https://kurumefan.com/denjiro-scienceshow) | 7月25日(土)・26日(日) | 久留米市 | ドキドキわくわくサイエンスショー |
-| [ジャー坊ふぁん2デー 夏まつりスペシャル](https://omuta.aeonmall.jp/event) | 7月25日(土) | 大牟田市・イオンモール大牟田 | ご当地キャラ夏まつり |
-| [おおむた大蛇山まつり2026](https://kurumefan.com/omuta-daijayama2026) | 7月下旬〜8月上旬 | 大牟田市 | 大牟田最大の夏祭り、一万人の総踊り |
-| [GACKT 魔王シンフォニー 2026](https://kurumefan.com/event-calendar-table) | 8月3日(月)・4日(火) | 久留米市・久留米シティプラザ | ライブ |
-| [第55回 水の祭典久留米まつり](https://kurumefan.com/mizunosaiten-kurumematsuri2026) | 8月上旬 | 久留米市 | そろばん踊りギネス記録挑戦 |
-| [筑後川花火大会 2026](https://kurumefan.com/chikugogawahanabitaikai2026) | 8月5日(水) | 久留米市・筑後川 | 西日本最大級の花火大会 |
-| [筑後児童合唱団 第23回定期演奏会](https://www.nishinippon.co.jp/kyushu_event/59818/) | 8月9日(日) | 筑後市・サザンクス筑後 | 児童合唱団の定期演奏会 |
-| [ドラゴンクエストコンサート2026](https://kurumefan.com/dragonquestconcert2026) | 9月6日(日) | 久留米市・石橋文化ホール | 九州交響楽団 |
-| [NHKのど自慢](https://kurumefan.com/nhk-nodojiman-kurumecity) | 11月1日(日) | 久留米市・久留米シティプラザ | 公開生放送 |
-| [ORANGE RANGE LIVE TOUR](https://kurumefan.com/orange-range-chikugo2026) | 12月6日(日) | 筑後市 | ライブツアー |
-| [大牟田銀座寿通りハシゴ酒](https://chikugo-ikoi.com/omuta-hashigozake2026/) | 開催中（詳細記事参照） | 大牟田市・銀座寿通り | チケット制のはしご酒イベント |
-| [西鉄久留米駅東口 Saturday Sunday Market](https://chikugo-ikoi.com/saturday-sunday-market/) | 毎週土日 | 久留米市・西鉄久留米駅東口 | グルメや雑貨のお店が集合 |
-| [土曜食いだおれ夜市2026](https://chikugo-ikoi.com/kuidaoreyoichi-chikugo2026/) | 夏季 毎週土曜 | 筑後市・恋ぼたる周辺 | 70店舗以上が週替わりで出店 |
+| イベント名 | 日程 | 場所 | 詳細 | 出典 |
+| --- | --- | --- | --- | --- |
+| [超！COOOOOOL作戦](https://omuta.aeonmall.jp/event/372a88aa-3b01-487c-a95b-da224c664955) | 6/1〜9/30 | 不明 | 超！COOOOOOL作戦 | イオンモール大牟田 |
+| [イオンモールの超！COOOOOOL作戦！](https://chikushino.aeonmall.jp/event/2b685792-be2c-43b9-8869-2b2fc7dc6445) | 6/1〜9/30 | 不明 | イオンモールの超！COOOOOOL作戦！ | イオンモール筑紫野 |
+| [2026.06.07 【6月28日㈰】歌のお兄さんともちか890（やっくん）ファミリーイベント　💛参加無料💛](https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1758523/) | 6/7〜6/28 | 不明 | 2026.06.07【6月28日㈰】歌のお兄さんともちか89… | イオン小郡SC |
+| [期間限定OPEN OZピース](https://chikushino.aeonmall.jp/event/8eda6c1c-7e14-46b1-9c98-b317d73396a9) | 6/19〜9/6 | 不明 | 期間限定OPENOZピース | イオンモール筑紫野 |
+| [2026.06.19 ✨【6月26日㈮〜7月5日㈰】イオンのランドセルフェス✨](https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1707340/) | 6/19〜7/5 | 不明 | 2026.06.19✨【6月26日㈮〜7月5日㈰】イオンのラ… | イオン小郡SC |
+| [久留米「土曜夜市2026」開催！金魚すくいにヨーヨー釣り、かき氷など約100店が軒を並べる](https://chikugo-ikoi.com/kurume-doyoyoichi2026/) | 6/20〜7/25 | 久留米市 | ある久留米ほとめき通り商店街で、今年も「土曜夜市」が開催され… | 筑後いこい |
+| [おもちゃ病院](https://chikushino.aeonmall.jp/event/5148ef78-58de-4faf-b319-8bdecfde10ce) | 6/26 | 不明 | おもちゃ病院 | イオンモール筑紫野 |
+| [「あわしまる夏の大感謝祭」大人気！くじ付きお楽しみ袋の販売などお得がいっぱい（久留米市）](https://chikugo-ikoi.com/awashimaru-summerevent2026/) | 6/27 | 久留米市 | 『あわしまる夏の大感謝祭』が開催されます | 筑後いこい |
+| [超宇宙刑事ギャバン インフィニティがやってくる！イオンモール大牟田で写真撮影会（大牟田市）](https://chikugo-ikoi.com/gavaninf-omuta/) | 6/27 | 大牟田市 | 「超宇宙刑事ギャバンインフィニティがやってくる！」が開催され… | 筑後いこい |
+| [大牟田高等学校吹奏楽部 演奏会♪](https://omuta.aeonmall.jp/event/855104a1-d8f0-4ecb-8e99-d1d8b02570a7) | 6/27 | 不明 | 大牟田高等学校吹奏楽部演奏会♪ | イオンモール大牟田 |
+| [100万人のクラシックライブ meet AEON MALL](https://omuta.aeonmall.jp/event/120e5057-3ed1-43a1-8d8e-6d11050bc0d5) | 6/27 | 不明 | 100万人のクラシックライブmeetAEONMALL | イオンモール大牟田 |
+| [明治安田生命健康チェック測定会](https://omuta.aeonmall.jp/event/5ca70ab5-231d-45f9-9e47-be6baab45687) | 6/27〜6/28 | 不明 | 明治安田生命健康チェック測定会 | イオンモール大牟田 |
+| [それいけ！アンパンマン ショー](https://chikushino.aeonmall.jp/event/f3e65b7d-5e9d-4bff-82f0-4856b3dfac78) | 6/27 | 不明 | それいけ！アンパンマンショー | イオンモール筑紫野 |
+| [〜NTT ドコモ presents～ ニューブロックで遊ぼう！](https://chikushino.aeonmall.jp/event/49345cd4-62e3-4d82-9005-1320ed73d97c) | 6/27〜6/28 | 不明 | 〜NTTドコモpresents～ニューブロックで遊ぼう！ | イオンモール筑紫野 |
+| [大川市「こども縁日夏まつり」こども食堂や縁日ゲーム、ステージなど内容盛りだくさんで開催！](https://chikugo-ikoi.com/okawa-summer-festival2026/) | 6/28 | 大川市 | 「こども縁日夏まつり」が開催されます | 筑後いこい |
+| [「名探偵プリキュア！ショー」6月28日開催！イオンモール大牟田で観覧無料（大牟田市）](https://chikugo-ikoi.com/precure-omuta20260628/) | 6/28 | 大牟田市 | 「名探偵プリキュア！ショー」が開催されます | 筑後いこい |
+| [久留米「サマーウォーターガンフェス」いろんな水鉄砲でびしょ濡れになって楽しんじゃおう！](https://chikugo-ikoi.com/summer-water-gunfes/) | 6/28 | 久留米市 | 「サマーウォーターガンフェス」が開催されます | 筑後いこい |
+| [「八女軽トラ市」6月28日開催！新鮮野菜や加工食品、雑貨などを販売（八女市）](https://chikugo-ikoi.com/yame-keitoraichi-20260628/) | 6/28 | 八女市 | 「八女軽トラ市」が開催されます | 筑後いこい |
+| [「にじいろマルシェ」6月28日開催！ハンドメイド雑貨やグルメなどステキなお店が大集合（筑後市）](https://chikugo-ikoi.com/nijiiro-marche20260628/) | 6/28 | 筑後市 | 「にじいろマルシェ」が開催されます | 筑後いこい |
+| [イオンモールこども将棋王決定戦2026](https://omuta.aeonmall.jp/event/6c1acd41-44a0-4ea6-950b-447e04444806) | 6/28 | 不明 | イオンモールこども将棋王決定戦2026 | イオンモール大牟田 |
+| [おおむたスタンプラリー](https://omuta.aeonmall.jp/event/9de1427b-9c9f-4a15-affe-13a7a7fcb858) | 6/28 | 不明 | おおむたスタンプラリー | イオンモール大牟田 |
+| [名探偵プリキュア！ショー](https://omuta.aeonmall.jp/event/06a7aca6-680e-4b5d-8a97-6281c02bf87c) | 6/28 | 不明 | 名探偵プリキュア！ショー | イオンモール大牟田 |
+| [九州プロレスがやってくるバイ！](https://chikushino.aeonmall.jp/event/7ef07a0c-033f-487f-b501-069ebc3035d1) | 6/28 | 不明 | 九州プロレスがやってくるバイ！ | イオンモール筑紫野 |
+| [アーとしたい！！「群青の森に泳ぐ」【参加無料】](https://omuta.aeonmall.jp/event/032e61d5-6015-47f7-a787-9fac8e1c53e2) | 7/4 | 不明 | アーとしたい！！「群青の森に泳ぐ」【参加無料】 | イオンモール大牟田 |
+| [映画「トイ・ストーリー５」公開記念 ワークショップ フォーキーまたはカレン・ビバリーを作ろう！](https://omuta.aeonmall.jp/event/a2470ce6-707a-48ed-84bb-7faae1c2084a) | 7/4 | 不明 | 映画「トイ・ストーリー５」公開記念ワークショップフォーキーま… | イオンモール大牟田 |
+| [榎田一王 トークショー](https://omuta.aeonmall.jp/event/067af991-3d24-482d-a42f-0fcf56d74df0) | 7/5 | 不明 | 榎田一王トークショー | イオンモール大牟田 |
+| [7月5日（日）献血にご協力ください](https://omuta.aeonmall.jp/event/0962600a-d7d5-41d2-9796-9accb34e0f56) | 7/5 | 不明 | 献血にご協力ください | イオンモール大牟田 |
+| [マインクラフト(R)パーティー BINGO大会 in イオンモール筑紫野](https://chikushino.aeonmall.jp/event/ad890a57-3d64-4dec-866c-c0bcfbd4981e) | 7/5 | 不明 | マインクラフト(R)パーティーBINGO大会inイオンモール… | イオンモール筑紫野 |
+| [筑紫野日和](https://chikushino.aeonmall.jp/event/38231207-9c84-413e-878d-7856761aa4e3) | 7/8 | 不明 | 筑紫野日和 | イオンモール筑紫野 |
+| [マイメロディ＆クロミ スペシャルステージ](https://omuta.aeonmall.jp/event/9bc3952e-32f6-440a-bb9d-1530d6b638d9) | 7/11 | 不明 | マイメロディ＆クロミスペシャルステージ | イオンモール大牟田 |
+| [おえかき風鈴ワークショップ](https://chikushino.aeonmall.jp/event/78fcb2eb-c2b4-4d64-bf27-5199d6f608d3) | 7/11〜7/12 | 不明 | おえかき風鈴ワークショップ | イオンモール筑紫野 |
+| [ワークショップイベント 手作りカフェ](https://chikushino.aeonmall.jp/event/f4d41fd7-7c8c-4a5a-8151-6f78322746dc) | 7/11〜7/12 | 不明 | ワークショップイベント手作りカフェ | イオンモール筑紫野 |
+| [それいけ！アンパンマン ショー](https://omuta.aeonmall.jp/event/10f07f75-bfa1-4382-9c44-94a44b85585e) | 7/12 | 不明 | それいけ！アンパンマンショー | イオンモール大牟田 |
+| [福岡県警察音楽隊 安全・安心コンサート](https://omuta.aeonmall.jp/event/31c34299-709e-4afc-a2f0-be350ae96d29) | 7/14 | 不明 | 福岡県警察音楽隊安全・安心コンサート | イオンモール大牟田 |
+| [「土曜食いだおれ夜市2026」筑後の大規模夜市イベント開催！70店舗以上が週替わりで大集合（筑後市）](https://chikugo-ikoi.com/kuidaoreyoichi-chikugo2026/) | 7/18〜8/29 | 筑後市 | 「土曜食いだおれ夜市in筑後」が開催されます | 筑後いこい |
+| [7/18～20 OMUTA BIG FESTIVAL2026](https://omuta.aeonmall.jp/event/c966294b-e7d4-4ba4-a05a-0463b7cdd16a) | 7/18〜7/20 | 不明 | 7/18～20OMUTABIGFESTIVAL2026 | イオンモール大牟田 |
+| [⽔遊びひろば](https://omuta.aeonmall.jp/event/e43f9cf2-280f-4cd0-9b97-b81081f4f057) | 7/18〜8/2 | 不明 | ⽔遊びひろば | イオンモール大牟田 |
+| [もりまちマルシェ](https://chikushino.aeonmall.jp/event/e0cd545d-29a8-4b57-b5e2-f5157d44926e) | 7/18〜7/19 | 不明 | もりまちマルシェ | イオンモール筑紫野 |
+| [ペルピンズ スペシャルライブ](https://omuta.aeonmall.jp/event/f691d524-75d8-4b1d-ae79-4c71cc920b33) | 7/20 | 不明 | ペルピンズスペシャルライブ | イオンモール大牟田 |
+| [ゆるきゃら界のアイドル 寺嶋由芙 ミニライブ＆特典会](https://omuta.aeonmall.jp/event/dd0ad2fc-fd22-47fb-981a-77df0a6568f4) | 7/25 | 不明 | ゆるきゃら界のアイドル寺嶋由芙ミニライブ＆特典会 | イオンモール大牟田 |
+| [100万人のクラシックライブ meet AEON MALL](https://omuta.aeonmall.jp/event/15cd7978-a123-4c55-840c-2e53386e2690) | 7/25 | 不明 | 100万人のクラシックライブmeetAEONMALL | イオンモール大牟田 |
+| [んぽちゃむ「みんなとあいたいちゃむ」](https://omuta.aeonmall.jp/event/7c68883c-c991-4356-8913-dec5b092eeb0) | 7/25 | 不明 | んぽちゃむ「みんなとあいたいちゃむ」 | イオンモール大牟田 |
+| [ジャー坊ふぁん2デー 夏まつりスペシャル](https://omuta.aeonmall.jp/event/9be9a2b4-48ea-4ac9-a77a-584708cf7c0a) | 7/25 | 不明 | ジャー坊ふぁん2デー夏まつりスペシャル | イオンモール大牟田 |
+| [沖縄の音楽](https://omuta.aeonmall.jp/event/ed18b628-2bc2-4dbd-92e5-19301ebc4a1a) | 7/25 | 不明 | 沖縄の音楽 | イオンモール大牟田 |
+| [おえかき提灯ワークショップ](https://chikushino.aeonmall.jp/event/fbf50396-4d24-429b-a46d-6daa73c78d2f) | 7/25〜7/26 | 不明 | おえかき提灯ワークショップ | イオンモール筑紫野 |
+| [献血バスがやってくる！](https://chikushino.aeonmall.jp/event/f4fcb66b-c607-4439-b428-31fe1e5ba5e0) | 7/25〜7/26 | 不明 | 献血バスがやってくる！ | イオンモール筑紫野 |
+| [Be-ray Summer Journey 2026](https://omuta.aeonmall.jp/event/f74447c7-a168-4962-a4fa-58411d036cbf) | 7/27 | 不明 | Be-raySummerJourney2026 | イオンモール大牟田 |
+| [＼イオンモール ツーリズム企画／ ドゲンジャーズショー＆写真撮影会](https://chikushino.aeonmall.jp/event/c8dba4b9-cdc8-458b-af6c-c9e9f3edba9d) | 8/2 | 不明 | ＼イオンモールツーリズム企画／ドゲンジャーズショー＆写真撮影… | イオンモール筑紫野 |
+| [それいけ！アンパンマン ショー](https://omuta.aeonmall.jp/event/d2ffba96-e54e-4047-87d1-54dfa3b58742) | 8/8 | 不明 | それいけ！アンパンマンショー | イオンモール大牟田 |
+| [もりまちマルシェ](https://chikushino.aeonmall.jp/event/04ba5b47-c649-4e14-aecd-b7678d9290c4) | 8/9 | 不明 | もりまちマルシェ | イオンモール筑紫野 |
+| [＼イオンモール ツーリズム企画／ ドゲンジャーズショー＆写真撮影会](https://omuta.aeonmall.jp/event/63b3f470-3e67-432a-9a33-58ff7111ca9e) | 8/13 | 不明 | ＼イオンモールツーリズム企画／ドゲンジャーズショー＆写真撮影… | イオンモール大牟田 |
+| [ワークショップイベント 手作りカフェ](https://chikushino.aeonmall.jp/event/eae291c3-509d-482d-b5ef-04e59ba9b94a) | 8/22〜8/23 | 不明 | ワークショップイベント手作りカフェ | イオンモール筑紫野 |
+
+## 📍 熊本県北部（荒尾・玉名・山鹿・南関など）
+
+| イベント名 | 日程 | 場所 | 詳細 | 出典 |
+| --- | --- | --- | --- | --- |
+| [夏目漱石来熊130周年企画 デジタルスタンプラリー](https://kumamoto.guide/events/detail/7749) | 5/1〜10/25 | 熊本市 | 夏目漱石来熊130周年企画デジタルスタンプラリー2026年5… | くまもとガイド |
+| [荒尾干潟でテーラー乗車体験！4月14日から受付開始](https://kumamoto.guide/events/detail/6803) | 5/16〜9/26 | 不明 | 荒尾干潟でテーラー乗車体験！4月14日から受付開始2026年… | くまもとガイド |
+| [あじさいまつり](https://kumamoto.guide/events/detail/7772) | 6/10〜7/10 | 山鹿市 | 「あじさいまつ…県北エリア山鹿 | くまもとガイド |
+| [南関御茶屋跡「七夕まつり」](https://kumamoto.guide/events/detail/7773) | 7/3〜7/21 | 不明 | 南関御茶屋跡「七夕まつり」2026年7月3日〜2026年7月… | くまもとガイド |
+| [国史跡 南関御茶屋跡「七夕まつり」2026 国史跡 南関御茶屋跡「七夕まつり」2026 お殿様とお姫様が休んだ場所で、夏](https://kumamoto-odekake.com/event/9113/) | 7/3 | 南関町 | 国史跡南関御茶屋跡「七夕まつり」2026国史跡南関御茶屋跡「… | 熊本おでかけ情報 |
+
+## 📍 その他（熊本市・阿蘇・人吉球磨など）
+
+| イベント名 | 日程 | 場所 | 詳細 | 出典 |
+| --- | --- | --- | --- | --- |
+| [1日坂本村 ―坂本小さな映画祭― 1日坂本村 ―坂本小さな映画祭― 令和2年7月豪雨6年、あの日とあれからを映画に映し出](https://kumamoto-odekake.com/event/9094/) | 7/4 | 1日坂本村 | 1日坂本村―坂本小さな映画祭―1日坂本村―坂本小さな映画祭―… | 熊本おでかけ情報 |
+| [第31回 さざ波フェスタ 2026 第31回 さざ波フェスタ 2026 四郎ヶ浜ビーチで花火・ライブ・砂浜エンターテイメ](https://kumamoto-odekake.com/event/2906/) | 7/19 | 天草市 | 第31回さざ波フェスタ2026第31回さざ波フェスタ2026… | 熊本おでかけ情報 |
+| [TAKAMORIバル in July TAKAMORIバル in July 高森駅交流施設で星空と地酒を楽しむ夏の夜阿蘇](https://kumamoto-odekake.com/event/7765/) | 7/24 | 夏の夜阿蘇・高森町 | TAKAMORIバルinJulyTAKAMORIバルinJu… | 熊本おでかけ情報 |
+| [第38回 ヤマメつかみ取り大会 第38回 ヤマメつかみ取り大会 冷たい渓流でヤマメを素手でつかまえろ！五家荘の渓流に、今](https://kumamoto-odekake.com/event/3138/) | 7/26 | 八代市 | 第38回ヤマメつかみ取り大会第38回ヤマメつかみ取り大会冷た… | 熊本おでかけ情報 |
+| [第59回 八代くま川祭り 第59回 八代くま川祭り 「飛び込め、総踊り！」今年の夏は見るだけで終わらせない「今年の夏、見](https://kumamoto-odekake.com/event/2697/) | 7/31〜8/1 | 八代市 | 第59回八代くま川祭り第59回八代くま川祭り「飛び込め、総踊… | 熊本おでかけ情報 |
 
 ---
 
-## 📍 熊本県北部（荒尾・玉名・山鹿）
-
-| イベント名 | 日程 | 場所 | 詳細 |
-|---|---|---|---|
-| [荒尾干潟でテーラー乗車体験](https://kumamoto.guide/events/detail/6803) | 受付中（2026年） | 荒尾市・荒尾干潟 | テーラー（耕運機）乗車体験 |
-| [南関御茶屋跡「七夕まつり」2026](https://kumamoto.guide/events/detail/7773) | 7月3日〜7月21日 | 玉名郡南関町・南関御茶屋跡 | 国史跡での七夕まつり |
-| [夜の魔法学校からの脱出（グリーンランド）](https://kumamoto-odekake.com/event/) | 10月1日〜11月8日 | 荒尾市・グリーンランド | 累計40万人動員の脱出ゲーム |
-
----
-
-## 📍 佐賀エリア（佐賀市・鳥栖市・みやき町）
-
-| イベント名 | 日程 | 場所 | 詳細 |
-|---|---|---|---|
-| [新鳥栖駅 サマーフェスタ2026](https://kurumefan.com/shitosu-summerfesta2026) | 6月26日(金)〜7月5日(日) | 鳥栖市・新鳥栖駅 | ミニトレイン乗車体験や射的 |
-| [フレスポ鳥栖 サンリオカフェワゴン](https://www.sanrio.co.jp/news/spots/cafewagon-frespotosu-20260616/) | 6月27日(土)・28日(日) | 鳥栖市・フレスポ鳥栖 | サンリオクレープ号・カフェワゴン |
-| [みやきマルシェ×ゆめマルシェ](https://kurumefan.com/miyakimarche202606) | 6月27日(土)・28日(日) | みやき町 | 約140店舗が大集合、ステージも |
-| [みやき町『二千年ハス鑑賞会』](https://kurumefan.com/miyaki-nisennen-hasu2026) | 6月28日(日) | みやき町・千栗土居公園 | 二千年ハスの鑑賞会 |
-| [ハローキティミニステージ](https://kurumefan.com/hellokitty-stage-tosu202606) | 7月3日(金)〜 | 鳥栖市・フレスポ鳥栖 | ステージショー、参加・観覧無料 |
-| [ゆめモール柳川 サンリオカフェワゴン](https://www.sanrio.co.jp/news/spots/cafewagon-yanagawa-20260623/) | 7月4日(土)・5日(日) | 柳川市・ゆめモール柳川 | サンリオカフェワゴン |
-| [ミラクルひかる×荒牧陽子 ものまねライブ](https://kurumefan.com/tosu-monomane-live) | 7月5日(日) | 鳥栖市 | ものまねジョイントライブ |
-| [JUJU HALL TOUR 2026](https://kurumefan.com/juju-hall-tour2026-tosu) | 7月18日(土) ほか | 鳥栖市・鳥栖市民文化会館 | 純喫茶JUJU「時間旅行」 |
-| [ハラミちゃん 47都道府県ピアノツアー](https://kurumefan.com/harami-tosu) | 12月19日(土) | 鳥栖市 | 旅するピアノと47の出会い |
-
----
-
-## 📍 その他（熊本市・阿蘇・球磨など）
-
-| イベント名 | 日程 | 場所 | 詳細 |
-|---|---|---|---|
-| [人吉球磨の鮎まつり](https://kumamoto.guide/events/detail/7513) | 6月1日〜10月31日 | 人吉・球磨地域 | 鮎を味わう夏の祭り |
-| [ひとよし満喫旅 クーポン付キャンペーン](https://kumamoto.guide/events/detail/7510) | 6月1日〜9月30日 | 人吉市 | 宿泊&買い物クーポン付 |
-| [夏目漱石来熊130周年 デジタルスタンプラリー](https://kumamoto.guide/events/detail/7749) | 5月1日〜10月25日 | 熊本市ほか | デジタルスタンプラリー |
-| [夏目漱石来熊130年記念展「漱石の見た阿蘇」](https://kumamoto.guide/events/detail/7751) | 4月4日〜9月29日 | 阿蘇地域 | 記念展示 |
-| [高森湧水トンネル納涼七夕まつり](https://kumamoto.guide/events/detail/7338) | 7月3日〜7月7日 | 阿蘇郡高森町 | 七夕まつり |
-| [第2回 氷川町七夕まつり](https://kumamoto-odekake.com/event/) | 7月4日(土) | 八代郡氷川町・氷川町公民館 | ダンス・縁日・移動動物園 |
-| [1日坂本村 ―坂本小さな映画祭―](https://kumamoto-odekake.com/event/) | 7月4日(土) | 八代市坂本町 | 令和2年7月豪雨6年の映画祭 |
-| [にゃんてつマルシェ](https://kumamoto.guide/events/detail/7516) | 7月18日(土) | 南阿蘇 | マルシェ |
-| [熊本博物館 夏季特別展「氷の大陸 南極展」](https://kumamoto.guide/events/detail/7770) | 7月18日〜9月6日 | 熊本市・熊本博物館 | 南極展 |
-| [第31回 さざ波フェスタ2026](https://kumamoto-odekake.com/event/) | 7月19日(日) | 天草・四郎ヶ浜ビーチ | 花火・ライブ |
-| [TAKAMORIバル in July](https://kumamoto-odekake.com/event/) | 7月24日(金) | 阿蘇郡高森町・高森駅交流施設 | 星空とグルメのバル |
-| [第38回 ヤマメつかみ取り大会](https://kumamoto-odekake.com/event/) | 7月26日(日) | 八代市 | 渓流でヤマメを素手でつかむ |
-| [第59回 八代くま川祭り](https://kumamoto-odekake.com/event/) | 7月31日〜8月1日 | 八代市 | 総踊り |
-| [第49回 火の国まつり](https://kumamoto-odekake.com/event/) | 8月（詳細参照） | 熊本市 | 熊本市最大の夏祭り |
-| [矢部の八朔祭2026](https://kumamoto-odekake.com/event/) | 9月5日〜6日 | 上益城郡山都町 | 約270年の伝統、大造り物 |
-| [お城EXPO in 熊本2026](https://kumamoto.guide/events/detail/7752) | 2026年（詳細参照） | 熊本市 | お城の祭典 |
-| [熊本七夕ランタンフェス 2026](https://kumamoto-odekake.com/event/) | 7月（詳細参照） | 合志市 | ランタンフェス |
-| [しめフェス in イオンモール福岡](https://fukuoka.aeonmall.jp/event) | 7月25日(土)・26日(日) | 福岡市（糟屋郡）・イオンモール福岡 | 地域フェス |
-| [上須恵祇園山笠 特別記念展示](https://fukuoka.aeonmall.jp/event) | 7月28日〜8月10日 | 福岡市（糟屋郡）・イオンモール福岡 | 山笠の特別記念展示 |
+> ⚠️ 参加費・駐車場などの詳細は各イベントの公式情報をご確認ください。サイト構造の変化により一部情報が欠落する場合があります。
